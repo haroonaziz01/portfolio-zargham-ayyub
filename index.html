@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zargham Ayyub | Cybersecurity Portfolio</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:url("https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+opacity:0.12;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(
+120deg,
+rgba(0,229,255,0.06),
+rgba(0,255,204,0.03),
+rgba(255,255,255,0.02)
+);
+z-index:-1;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container{
+display:flex;
+min-height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar{
+width:300px;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(18px);
+padding:25px;
+border-right:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
+height:100vh;
+overflow-y:auto;
+}
+
+/* PROFILE */
+.profile-box{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.profile-box img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00e5ff;
+box-shadow:0 0 30px #00e5ff;
+transition:0.4s;
+}
+
+.profile-box img:hover{
+transform:scale(1.05) rotate(2deg);
+box-shadow:0 0 45px #00ffcc;
+}
+
+/* SIDEBAR TEXT */
+.sidebar h2{
+font-family:'Orbitron',sans-serif;
+font-size:30px;
+text-align:center;
+color:#00ffcc;
+margin-bottom:10px;
+}
+
+.sidebar p{
+text-align:center;
+font-size:13px;
+line-height:1.9;
+color:#c7c7c7;
+margin-bottom:30px;
+}
+
+/* NAVIGATION */
+.nav a{
+display:flex;
+align-items:center;
+gap:14px;
+padding:15px 18px;
+margin:12px 0;
+text-decoration:none;
+color:white;
+border-radius:50px;
+transition:0.35s;
+font-weight:500;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.03);
+}
+
+.nav a:hover{
+background:#00e5ff;
+color:black;
+transform:translateX(8px);
+box-shadow:0 0 18px #00e5ff;
+}
+
+/* =========================
+   MAIN
+========================= */
+.main{
+flex:1;
+padding:55px;
+}
+
+/* =========================
+   SECTION
+========================= */
+section{
+margin-bottom:100px;
+}
+
+h1{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+margin-bottom:18px;
+color:#00e5ff;
+text-shadow:0 0 20px rgba(0,229,255,0.5);
+}
+
+.section-subtitle{
+font-size:18px;
+color:#cfcfcf;
+line-height:1.9;
+max-width:1000px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+}
+
+.hero-wrapper{
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:40px;
+align-items:center;
+width:100%;
+}
+
+/* LEFT */
+.hero-left h3{
+font-size:20px;
+color:#00ffcc;
+margin-bottom:18px;
+letter-spacing:2px;
+}
+
+.hero-left h1{
+font-size:70px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-left h1 span{
+color:#00ffcc;
+}
+
+.hero-left p{
+font-size:17px;
+line-height:2;
+color:#d8d8d8;
+margin-bottom:35px;
+max-width:800px;
+}
+
+/* BUTTONS */
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+padding:16px 28px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.primary-btn{
+background:#00e5ff;
+color:black;
+}
+
+.primary-btn:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px #00e5ff;
+}
+
+.secondary-btn{
+border:1px solid #00e5ff;
+color:#00e5ff;
+}
+
+.secondary-btn:hover{
+background:#00e5ff;
+color:black;
+transform:translateY(-6px);
+}
+
+/* RIGHT */
+.hero-right{
+display:flex;
+justify-content:center;
+}
+
+.hero-card{
+position:relative;
+width:350px;
+height:350px;
+border-radius:30px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+backdrop-filter:blur(15px);
+transition:0.4s;
+}
+
+.hero-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(0,229,255,0.5);
+border-color:#00e5ff;
+}
+
+.hero-card::before{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+background:#00e5ff;
+opacity:0.14;
+filter:blur(120px);
+}
+
+.hero-card i{
+font-size:120px;
+color:#00e5ff;
+z-index:2;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card{
+position:relative;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:24px;
+transition:0.4s;
+overflow:hidden;
+backdrop-filter:blur(12px);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 30px rgba(0,229,255,0.4);
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+45deg,
+transparent,
+rgba(0,229,255,0.08),
+transparent
+);
+transform:rotate(25deg);
+transition:0.6s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+.card-icon{
+width:85px;
+height:85px;
+border-radius:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+margin-bottom:25px;
+background:rgba(0,229,255,0.12);
+color:#00e5ff;
+box-shadow:0 0 20px rgba(0,229,255,0.2);
+}
+
+.card h3{
+font-size:24px;
+color:#00ffcc;
+margin-bottom:16px;
+}
+
+.card p{
+font-size:14px;
+line-height:2;
+color:#ddd;
+}
+
+.card ul{
+margin-top:18px;
+padding-left:18px;
+}
+
+.card ul li{
+margin-bottom:12px;
+line-height:1.8;
+font-size:14px;
+color:#ddd;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills-wrapper{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:30px;
+margin-top:35px;
+}
+
+.skill-main-card{
+position:relative;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+overflow:hidden;
+backdrop-filter:blur(15px);
+transition:0.4s;
+}
+
+.skill-main-card:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 35px rgba(0,229,255,0.45);
+}
+
+.skill-main-card h3{
+font-size:30px;
+font-family:'Orbitron',sans-serif;
+color:#00ffcc;
+margin-bottom:20px;
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.skill-main-card p{
+font-size:15px;
+line-height:2;
+color:#ddd;
+margin-bottom:35px;
+}
+
+/* PROGRESS */
+.progress-item{
+margin-bottom:24px;
+}
+
+.progress-title{
+display:flex;
+justify-content:space-between;
+margin-bottom:10px;
+font-size:14px;
+font-weight:600;
+}
+
+.progress-bar{
+width:100%;
+height:12px;
+background:rgba(255,255,255,0.08);
+border-radius:50px;
+overflow:hidden;
+}
+
+.progress-fill{
+height:100%;
+border-radius:50px;
+background:linear-gradient(90deg,#00e5ff,#00ffcc);
+}
+
+/* RIGHT SKILLS */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+}
+
+.skill-card{
+padding:28px;
+border-radius:22px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 30px rgba(0,229,255,0.35);
+}
+
+.skill-icon{
+width:80px;
+height:80px;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+margin-bottom:22px;
+background:rgba(0,229,255,0.12);
+color:#00e5ff;
+}
+
+.skill-card h3{
+font-size:22px;
+margin-bottom:14px;
+color:#00ffcc;
+}
+
+.skill-card p{
+font-size:14px;
+line-height:1.9;
+color:#ddd;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+/* =========================
+   CERTIFICATIONS (FIXED)
+========================= */
+
+#certifications .grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+#certifications .card{
+padding:12px;
+border-radius:18px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+height:180px;   /* 👈 FIX HEIGHT */
+}
+
+#certifications .card:hover{
+transform:translateY(-8px) scale(1.02);
+border-color:#00e5ff;
+box-shadow:0 0 25px rgba(0,229,255,0.35);
+}
+
+#certifications .card img{
+max-width:100%;
+max-height:100%;
+width:auto;
+height:auto;
+object-fit:contain;  /* 👈 IMPORTANT FIX */
+display:block;
+}
+/* =========================
+   CONTACT
+========================= */
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1.3fr;
+gap:30px;
+margin-top:30px;
+}
+
+.main-contact{
+position:relative;
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+overflow:hidden;
+backdrop-filter:blur(15px);
+transition:0.4s;
+}
+
+.main-contact:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 35px rgba(0,229,255,0.4);
+}
+
+.main-contact h2{
+font-size:34px;
+font-family:'Orbitron',sans-serif;
+color:#00ffcc;
+margin-bottom:20px;
+}
+
+.main-contact p{
+font-size:15px;
+line-height:2;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.contact-line{
+display:flex;
+align-items:center;
+gap:15px;
+margin:18px 0;
+}
+
+.contact-line i{
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(0,229,255,0.12);
+color:#00e5ff;
+}
+
+/* RIGHT */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.contact-box{
+padding:30px;
+border-radius:24px;
+text-decoration:none;
+color:white;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
+
+.contact-box:hover{
+transform:translateY(-10px);
+border-color:#00e5ff;
+box-shadow:0 0 30px rgba(0,229,255,0.4);
+}
+
+.icon-wrap{
+width:80px;
+height:80px;
+border-radius:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.whatsapp-box .icon-wrap{
+background:rgba(37,211,102,0.15);
+color:#25D366;
+}
+
+.email-box .icon-wrap{
+background:rgba(234,67,53,0.15);
+color:#EA4335;
+}
+
+.linkedin-box .icon-wrap{
+background:rgba(10,102,194,0.15);
+color:#0A66C2;
+}
+
+.github-box .icon-wrap{
+background:rgba(255,255,255,0.12);
+color:#fff;
+}
+
+.contact-box h3{
+font-size:24px;
+margin-bottom:14px;
+}
+
+.contact-box p{
+font-size:14px;
+line-height:1.8;
+color:#ddd;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00e5ff;
+border-radius:20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:1100px){
+
+.hero-wrapper,
+.skills-wrapper,
+.contact-wrapper{
+grid-template-columns:1fr;
+}
+
+.skills-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero-left h1{
+font-size:50px;
+}
+
+.hero{
+min-height:auto;
+}
+
+}
+
+@media(max-width:950px){
+
+.container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
+position:relative;
+}
+
+.main{
+padding:30px;
+}
+
+h1{
+font-size:36px;
+}
+
+.profile-box img{
+width:120px;
+height:120px;
+}
+
+.hero-left h1{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+<div class="sidebar">
+
+<div class="profile-box">
+
+<!-- CHANGE IMAGE PATH -->
+<img src="transparant-dp.png" alt="Zargham Ayyub">
+
+</div>
+
+<h2>Zargham Ayyub</h2>
+
+<p>
+Cybersecurity Expert <br>
+Ethical Hacker <br>
+Security Researcher
+</p>
+
+<div class="nav">
+
+<a href="#home">
+<i class="fas fa-house"></i> Home
+</a>
+
+<a href="#about">
+<i class="fas fa-user-secret"></i> About
+</a>
+
+<a href="#education">
+<i class="fas fa-graduation-cap"></i> Education
+</a>
+
+<a href="#skills">
+<i class="fas fa-shield-halved"></i> Skills
+</a>
+
+<a href="#experience">
+<i class="fas fa-briefcase"></i> Experience
+</a>
+
+<a href="#projects">
+<i class="fas fa-code"></i> Projects
+</a>
+
+<a href="#certifications">
+<i class="fas fa-certificate"></i> Certifications
+</a>
+
+<a href="#contact">
+<i class="fas fa-phone"></i> Contact
+</a>
+
+</div>
+
+</div>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+<div class="main">
+
+<!-- =========================
+     HOME
+========================= -->
+<section id="home" class="hero">
+
+<div class="hero-wrapper">
+
+<div class="hero-left">
+
+<h3>WELCOME TO MY CYBER WORLD</h3>
+
+<h1>
+Zargham <span>Ayyub</span>
+</h1>
+
+<p>
+Certified Ethical Hacker and Cybersecurity Specialist with expertise in penetration testing, digital forensics, network security, vulnerability assessment, incident response, and enterprise security architecture. Passionate about protecting digital systems, training future cybersecurity professionals, and building secure infrastructures using modern cyber defense strategies.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="hero-btn primary-btn">
+<i class="fas fa-paper-plane"></i>
+Hire Me
+</a>
+
+<a href="#projects" class="hero-btn secondary-btn">
+<i class="fas fa-code"></i>
+View Projects
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-card">
+<img src="transparant-dp.png" alt="Hero Image">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+<section id="about">
+
+<h1>About Me</h1>
+
+<p class="section-subtitle">
+Cybersecurity professional with strong experience in ethical hacking, vulnerability assessment, enterprise network security, and digital defense operations. Passionate about helping organizations identify weaknesses, strengthen their infrastructure, and defend against modern cyber threats through practical security strategies and real-world penetration testing methodologies.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-user-secret"></i>
+</div>
+
+<h3>Ethical Hacking</h3>
+
+<p>
+Experienced in penetration testing, exploit analysis, vulnerability discovery, attack simulation, privilege escalation, and red-team methodologies using industry-standard cybersecurity tools and frameworks.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-network-wired"></i>
+</div>
+
+<h3>Network Security</h3>
+
+<p>
+Strong expertise in enterprise networking, firewall management, VLAN segmentation, secure routing & switching, VPN deployment, DHCP Snooping, and layered security architecture.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-graduation-cap"></i>
+</div>
+
+<h3>Cybersecurity Trainer</h3>
+
+<p>
+Delivered professional cybersecurity training programs under NAVTTC and institutional environments with practical labs, real attack simulations, and CEH-focused security exercises.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     EDUCATION
+========================= -->
+<section id="education">
+
+<h1>Education</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-university"></i>
+</div>
+
+<h3>BS Information Technology</h3>
+
+<p>
+University of Kotli AJK, Pakistan
+</p>
+
+<ul>
+<li>CGPA: 3.43 / 4.0</li>
+<li>Cybersecurity & Information Security</li>
+<li>Computer Networking & Routing</li>
+<li>Operating Systems & Virtualization</li>
+<li>Programming Fundamentals</li>
+<li>Database & System Administration</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     SKILLS
+========================= -->
+<section id="skills">
+
+<h1>Technical Skills</h1>
+
+<p class="section-subtitle">
+Professional expertise across cybersecurity operations, penetration testing, network security, cloud defense, scripting automation, and enterprise infrastructure security.
+</p>
+
+<div class="skills-wrapper">
+
+<div class="skill-main-card">
+
+<h3>
+<i class="fas fa-shield-halved"></i>
+Cybersecurity Expertise
+</h3>
+
+<p>
+Experienced in offensive and defensive cybersecurity operations including ethical hacking, penetration testing, vulnerability assessment, SIEM analysis, digital security auditing, and incident response.
+</p>
+
+<div class="progress-item">
+<div class="progress-title">
+<span>Penetration Testing</span>
+<span>95%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:95%"></div>
+</div>
+</div>
+
+<div class="progress-item">
+<div class="progress-title">
+<span>Network Security</span>
+<span>92%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:92%"></div>
+</div>
+</div>
+
+<div class="progress-item">
+<div class="progress-title">
+<span>Security Auditing</span>
+<span>90%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="progress-item">
+<div class="progress-title">
+<span>Threat Analysis</span>
+<span>88%</span>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:88%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+
+<div class="skill-icon">
+<i class="fab fa-linux"></i>
+</div>
+
+<h3>Kali Linux</h3>
+
+<p>
+Advanced experience in penetration testing, exploitation, reconnaissance, and cyber lab environments using Kali Linux.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-bug"></i>
+</div>
+
+<h3>Security Tools</h3>
+
+<p>
+Hands-on expertise with Metasploit, Burp Suite, Wireshark, Nmap, John The Ripper, and Cisco Packet Tracer.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-code"></i>
+</div>
+
+<h3>Programming</h3>
+
+<p>
+Skilled in Python, Bash scripting, PowerShell, and cybersecurity automation scripting.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<div class="skill-icon">
+<i class="fas fa-cloud"></i>
+</div>
+
+<h3>Cloud Security</h3>
+
+<p>
+Knowledge of Microsoft Security, Compliance & Identity Fundamentals and hybrid cloud protection systems.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+<section id="experience">
+
+<h1>Experience</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-briefcase"></i>
+</div>
+
+<h3>Cybersecurity Instructor - Corvit System Islamabad</h3>
+
+<p>
+Delivered professional cybersecurity training focused on ethical hacking, CEH labs, penetration testing, cyber defense, and practical attack simulation environments.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-robot"></i>
+</div>
+
+<h3>Technology Trainer - LearnOBots & NUST</h3>
+
+<p>
+Conducted practical training sessions in Robotics, IoT, Artificial Intelligence, Web 3.0, and cybersecurity technologies.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fab fa-microsoft"></i>
+</div>
+
+<h3>Microsoft & GIZ Security Training</h3>
+
+<p>
+Hands-on training in Microsoft Security, Compliance, Identity Management, Fortinet firewalls, and enterprise access control systems.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     PROJECTS
+========================= -->
+<section id="projects">
+
+<h1>Projects</h1>
+
+<p class="section-subtitle">
+Real-world cybersecurity and enterprise networking projects focused on security analysis, attack simulation, infrastructure protection, and cyber awareness.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-lock"></i>
+</div>
+
+<h3>Windows Password Recovery & Analysis</h3>
+
+<p>
+Performed password hash extraction and authentication security analysis to identify vulnerabilities in Windows-based systems. Implemented password hardening and MFA recommendations.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-terminal"></i>
+</div>
+
+<h3>Kali Linux Exploitation Lab</h3>
+
+<p>
+Built a professional virtual penetration testing environment using Kali Linux and Windows systems for scanning, exploitation, post-exploitation, and vulnerability research.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-envelope-open-text"></i>
+</div>
+
+<h3>Social Engineering Awareness Campaign</h3>
+
+<p>
+Designed phishing simulations and awareness sessions to educate students and organizations about cyber attacks, phishing emails, and social engineering threats.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">
+<i class="fas fa-server"></i>
+</div>
+
+<h3>Enterprise Network Architecture</h3>
+
+<p>
+Designed scalable enterprise networks with VLAN segmentation, VRRP redundancy, Layer 3 switching, EtherChannel, DHCP Snooping, and secure routing infrastructure.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+<section id="certifications">
+
+<h1>Certifications</h1>
+
+<div class="grid">
+
+
+<div class="card"><img src="ECC-CEH-Certificate_page-0001.jpg.jpeg"></div> 
+<div class="card"><img src="zarghamayyub0012gmail.com_certificate_page-0001 (1).jpg.jpeg"></div> 
+<div class="card"><img src="CCEP.JPG.jpeg"></div> 
+<div class="card"><img src="introduction_to_cip (1).png"></div> 
+<div class="card"><img src="14.jpg.jpeg"></div> 
+<div class="card"><img src="9.jpg.jpeg"></div> 
+<div class="card"><img src="2.jpg.jpeg"></div> 
+<div class="card"><img src="4.jpg.jpeg"></div> 
+<div class="card"><img src="5.jpg.jpeg"></div> 
+<div class="card"><img src="6.jpg.jpeg"></div> 
+<div class="card"><img src="7.jpg.jpeg"></div> 
+<div class="card"><img src="8.jpg.jpeg"></div> 
+<div class="card"><img src="10.jpg.jpeg"></div> 
+<div class="card"><img src="12.jpg.jpeg"></div> 
+<div class="card"><img src="13.jpg.jpeg"></div> 
+<div class="card"><img src="CertificateOfCompletion_Cybersecurity Foundations-1.png"></div> 
+<div class="card"><img src="certified_certificate_page-0001.jpg.jpeg"></div> 
+<div class="card"><img src="Credentials - zarghamayyub-9634 _ Microsoft Learn-1.png"></div> 
+<div class="card"><img src="cybrary-cert-cysa-reporting-and-communication-1.png"></div> 
+<div class="card"><img src="NPdeQ43o8P9HJmJzg_MBA4MnZTNFEoJZGnk_TkJLh4Yvc79tnM2EX_1739467894449_completion_certificate-1.png"></div>
+</div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+<section id="contact">
+
+<h1>Contact</h1>
+
+<div class="contact-wrapper">
+
+<div class="main-contact">
+
+<h2>Let's Connect</h2>
+
+<p>
+Interested in cybersecurity collaboration, penetration testing, training programs, or enterprise security consultation? Feel free to connect with me.
+</p>
+
+<div class="contact-line">
+<i class="fas fa-location-dot"></i>
+<span>Rawalpindi, Pakistan</span>
+</div>
+
+<div class="contact-line">
+<i class="fas fa-envelope"></i>
+<span>zarghamayyub0012@gmail.com</span>
+</div>
+
+<div class="contact-line">
+<i class="fas fa-phone"></i>
+<span>+92 340 8023775</span>
+</div>
+
+</div>
+
+<div class="contact-grid">
+
+<a href="https://wa.me/923408023775" target="_blank" class="contact-box whatsapp-box">
+
+<div class="icon-wrap">
+<i class="fab fa-whatsapp"></i>
+</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+Quick communication for collaboration and professional discussions.
+</p>
+
+</a>
+
+<a href="mailto:zarghamayyub0012@gmail.com" class="contact-box email-box">
+
+<div class="icon-wrap">
+<i class="fas fa-envelope"></i>
+</div>
+
+<h3>Email</h3>
+
+<p>
+Professional communication for opportunities and inquiries.
+</p>
+
+</a>
+
+<a href="https://www.linkedin.com/in/zargham-ayyub/" target="_blank" class="contact-box linkedin-box">
+
+<div class="icon-wrap">
+<i class="fab fa-linkedin"></i>
+</div>
+
+<h3>LinkedIn</h3>
+
+<p>
+Explore certifications, professional experience, and achievements.
+</p>
+
+</a>
+
+<a href="https://github.com/zarghamayyub" target="_blank" class="contact-box github-box">
+
+<div class="icon-wrap">
+<i class="fab fa-github"></i>
+</div>
+
+<h3>GitHub</h3>
+
+<p>
+Explore cybersecurity projects, tools, and lab environments.
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+</div>
+
+</body>
+</html>
